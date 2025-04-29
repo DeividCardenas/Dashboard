@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard Básico</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="dashboard">
@@ -14,24 +14,26 @@
     </header>
 
     <aside class="sidebar">
-      <nav class="nav-links">
-        <a href="#" data-resource="users">Usuarios</a>
-        <a href="#" data-resource="posts">Posts</a>
-        <a href="#" data-resource="albums">Álbumes</a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="#" data-resource="users">Usuarios</a></li>
+          <li><a href="#" data-resource="posts">Posts</a></li>
+          <li><a href="#" data-resource="albums">Álbumes</a></li>
+        </ul>
       </nav>
     </aside>
 
     <main class="content">
-      <div class="status"></div>
+      <output class="status" aria-live="polite"></output>
+      
+      <!-- Contenedor Usuarios -->
+      <section id="users-container" class="data-section cards-container" aria-label="Usuarios"></section>
 
-      <!-- Contenedor Usuarios (cards) -->
-      <div id="users-container" class="data-section cards-container"></div>
+      <!-- Contenedor Posts -->
+      <section id="posts-container" class="data-section cards-container" aria-label="Posts"></section>
 
-      <!-- Contenedor Posts (cards) -->
-      <div id="posts-container" class="data-section cards-container"></div>
-
-      <!-- Contenedor Álbumes (cards) -->
-      <div id="albums-container" class="data-section cards-container"></div>
+      <!-- Contenedor Álbumes -->
+      <section id="albums-container" class="data-section cards-container" aria-label="Álbumes"></section>
     </main>
 
     <footer class="footer">© 2025 Mi Compañía</footer>
