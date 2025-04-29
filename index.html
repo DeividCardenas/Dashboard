@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Básico</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="dashboard">
+    <header class="header">
+      <h1 class="header-title">Mi Dashboard</h1>
+      <button id="theme-toggle" aria-label="Alternar tema">🌓</button>
+    </header>
+
+    <aside class="sidebar">
+      <nav class="nav-links">
+        <a href="#" data-resource="users">Usuarios</a>
+        <a href="#" data-resource="posts">Posts</a>
+        <a href="#" data-resource="albums">Álbumes</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <div class="status"></div>
+
+      <!-- Contenedor Usuarios (cards) -->
+      <div id="users-container" class="data-section cards-container"></div>
+
+      <!-- Contenedor Posts (cards) -->
+      <div id="posts-container" class="data-section cards-container"></div>
+
+      <!-- Contenedor Álbumes (cards) -->
+      <div id="albums-container" class="data-section cards-container"></div>
+    </main>
+
+    <footer class="footer">© 2025 Mi Compañía</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
